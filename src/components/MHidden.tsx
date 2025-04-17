@@ -1,9 +1,5 @@
-import PropTypes from 'prop-types';
-// material
 import { Theme, useMediaQuery } from '@mui/material';
 import { ReactNode } from 'react';
-
-// ----------------------------------------------------------------------
 
 export default function MHidden({ width, children }: {width: string; children: ReactNode}) {
   const breakpoint: any = width.substring(0, 2);

@@ -1,6 +1,5 @@
-// @ts-nocheck
 import { Box, Button, Stack, Typography } from '@mui/material';
-import React, { useRef, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import Slider from "react-slick";
 import CircleIcon from '@mui/icons-material/Circle';
@@ -99,10 +98,6 @@ function CardCarausel() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    // appendDots: dots => (
-     
-    //     <ul style={{ marginTop: "8px",  }}> {dots} </ul>
-    // ),
     customPaging: (pagi, i) => {
       const isActive  = pagi === currentSlideIndex;
       return (

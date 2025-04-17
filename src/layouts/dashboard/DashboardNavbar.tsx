@@ -1,7 +1,4 @@
-import React from 'react';
-import { Drawer, Stack, Typography, Box } from '@mui/material';
-import Logo from '../../components/Logo';
-
+import { Stack, Box } from '@mui/material';
 
 function DashboardNavbar() {
   return (

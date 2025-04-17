@@ -1,5 +1,5 @@
-import { Navigate, useRoutes, useLocation } from 'react-router-dom';
-import { FC, ReactComponentElement, Suspense, lazy } from 'react';
+import { Navigate, useRoutes } from 'react-router-dom';
+import { FC, Suspense, lazy } from 'react';
 import { CircularProgress } from '@mui/material';
 import { JSX } from 'react/jsx-runtime';
 import LogoOnlyLayout from '../layouts/LogoOnlyLayout';
@@ -47,10 +47,8 @@ const Loadable = (Component: FC) => (props: JSX.IntrinsicAttributes) => {
  
   }
 
-  // Main Page
   const HomePage = Loadable(lazy(() => import('../pages/home')));
   const CardsPage = Loadable(lazy(() => import('../pages/cards')));
 
-  // Not found pages 
-const NotFound = Loadable(lazy(() => import('../pages/Page404')));
-const Page500 = Loadable(lazy(() => import('../pages/Page500')));
+  const NotFound = Loadable(lazy(() => import('../pages/Page404')));
+  const Page500 = Loadable(lazy(() => import('../pages/Page500')));

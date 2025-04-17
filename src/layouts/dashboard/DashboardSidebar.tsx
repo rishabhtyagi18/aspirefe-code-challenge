@@ -1,11 +1,9 @@
 import { Drawer, Stack, Typography, Box } from '@mui/material';
-import React from 'react'
 import { useLocation, Link as RouterLink } from 'react-router-dom';
 import Scrollbar from '../../components/Scrollbar';
 import Logo from '../../components/Logo';
 
 const DRAWER_WIDTH = 340;
-
 
 const NavItem = ({ title, icon, iconSelected, isActive, navigateTo }: { title: string; icon: string; iconSelected: string, isActive: boolean, navigateTo:string; }) => {
 
@@ -42,12 +40,6 @@ function DashboardSidebar() {
             }}
         >
             <Stack
-            // spacing={3}
-            // sx={{
-            //   px: 2.5,
-            //   pt: 3,
-            //   pb: 2
-            // }}
             >
                 <Logo sx={{ width: 125, mb: 2 }} />
                 <Typography sx={{ color: 'white', opacity: 0.3, fontSize: 15 }}>
@@ -94,12 +86,7 @@ function DashboardSidebar() {
                         isActive={pathname === '/setting'}
                         navigateTo="/setting"
                     />
-
-
-
                 </Stack>
-
-
             </Stack>
         </Scrollbar>
     )
@@ -113,7 +100,6 @@ function DashboardSidebar() {
         <Drawer
             open
             variant='permanent'
-
             PaperProps={{
                 sx: { width: DRAWER_WIDTH, bgcolor: 'background.paper', pt: 6, px: 6 }
             }}
@@ -121,7 +107,6 @@ function DashboardSidebar() {
             {renderContent}
         </Drawer>
         </Box>
-
     )
 }
 

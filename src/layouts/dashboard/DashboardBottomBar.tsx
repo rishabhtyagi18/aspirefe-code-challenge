@@ -1,23 +1,15 @@
-import { BottomNavigation, BottomNavigationAction, Paper } from '@mui/material';
 import React from 'react'
-import RestoreIcon from '@mui/icons-material/Restore';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import ArchiveIcon from '@mui/icons-material/Archive';
 import { Link as RouterLink, useLocation } from 'react-router-dom';
-
-// material
 import { styled } from '@mui/material/styles';
-import { Box, AppBar, Toolbar, Typography, Icon } from '@mui/material';
+import { Box, AppBar, Toolbar, Typography } from '@mui/material';
 
 import _ from 'lodash';
 
 
 const APPBAR_MOBILE = 56;
-const APPBAR_DESKTOP = 56;
 
 const RootStyle = styled(AppBar)(({ theme }) => ({
   backdropFilter: 'blur(6px)',
-  // WebkitBackdropFilter: 'blur(6px)', // Fix on Mobile
   top: 'auto',
   bottom: 0,
   backgroundColor: 'white',
@@ -107,24 +99,6 @@ function DashboardBottomBar() {
             </RootStyle>
 
     </>
-  //   <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0, backgroundColor:'white' }} elevation={5}>
-  //   <BottomNavigation
-  //     showLabels
-  //     sx={{backgroundColor: 'inherit'}}
-  //     value={value}
-  //     onChange={(event, newValue) => {
-  //       setValue(newValue);
-  //     }}
-  //   >
-  //     <BottomNavigationAction label="Home" icon={<RestoreIcon />} />
-  //     <BottomNavigationAction label="Cards" icon={<FavoriteIcon />} />
-  //     <BottomNavigationAction label="Payments" icon={<ArchiveIcon />} />
-  //     <BottomNavigationAction label="Credit" icon={<ArchiveIcon />} />
-  //     <BottomNavigationAction label="Profile" icon={<ArchiveIcon />} />
-
-
-  //   </BottomNavigation>
-  // </Paper>
   )
 }
 

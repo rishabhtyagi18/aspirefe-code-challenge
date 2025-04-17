@@ -1,10 +1,7 @@
 import SimpleBarReact from 'simplebar-react';
-// material
 import { alpha, styled } from '@mui/material/styles';
 import { Box, SxProps } from '@mui/material';
 import { ReactNode } from 'react';
-
-// ----------------------------------------------------------------------
 
 const RootStyle = styled('div')({
   flexGrow: 1,
@@ -32,8 +29,6 @@ const SimpleBarStyle: any = styled(SimpleBarReact)(({ theme }) => ({
     zIndex: 'inherit'
   }
 }));
-
-// ----------------------------------------------------------------------
 
 export default function Scrollbar({ children, sx, ...other }: {children: ReactNode, sx: SxProps}) {
   const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);

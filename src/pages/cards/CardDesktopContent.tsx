@@ -1,5 +1,4 @@
 import { Box, Stack, Typography } from '@mui/material'
-import React from 'react'
 import CardSwiper from './sections/CardSwiper'
 import CardCtaBtn from './sections/CardCtaBtn'
 import CardDetailAccordion from './sections/CardDetailAccordion'
@@ -26,8 +25,6 @@ function CardDesktopContent() {
           <CardCtaBtn containerProps={{ mt: 4 }} />
 
         </Stack>
-
-
 
         <Stack direction="column" sx={{ ml: 6, width: '100%' }}>
           <CardDetailAccordion />

@@ -1,7 +1,4 @@
-// material
 import { alpha } from '@mui/material/styles';
-
-// ----------------------------------------------------------------------
 
 const LIGHT_MODE = '#919EAB';
 const DARK_MODE = '#000000';

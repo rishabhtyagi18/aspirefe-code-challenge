@@ -1,6 +1,6 @@
 import React from 'react'
 import {Accordion, Box, AccordionDetails, AccordionSummary, Typography} from '@mui/material';
-import ExpandCircleDownIcon from '@mui/icons-material/ExpandCircleDown';
+
 function CardDetailAccordion() {
     const [expanded, setExpanded] = React.useState<boolean | false>(false);
 

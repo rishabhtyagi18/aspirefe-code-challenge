@@ -3,8 +3,6 @@ import { red } from '@mui/material/colors';
 import componentsOverride from './overrides';
 import shadows from './shadows';
 
-
-// A custom theme for this app
 const theme = createTheme({
   typography: {
     fontFamily: ["'Open Sans'", 'sans-serif'].join(',')
@@ -24,6 +22,5 @@ const theme = createTheme({
   },
 });
 theme.components = componentsOverride(theme)
-
 
 export default theme;

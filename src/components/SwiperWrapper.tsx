@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { useEffect, useRef } from 'react';
 import { register } from 'swiper/element/bundle';
 
@@ -10,18 +9,14 @@ export function Swiper(props: any) {
   } = props;
 
   useEffect(() => {
-    // Register Swiper web component
     register();
 
-    // pass component props to parameters
     const params = {
       ...rest
     };
 
-    // Assign it to swiper element
     Object.assign(swiperRef.current, params);
 
-    // initialize swiper
     swiperRef.current.initialize();
   }, []);
 

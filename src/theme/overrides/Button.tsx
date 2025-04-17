@@ -14,7 +14,6 @@ export default function Button(theme: Theme) {
         sizeLarge: {
           height: 48
         },
-        // contained
         containedInherit: {
           color: theme.palette.grey[800],
           '&:hover': {
@@ -22,9 +21,7 @@ export default function Button(theme: Theme) {
           }
         },
        
-        // outlined
         outlinedInherit: {
-          // border: `1px solid ${theme.palette.grey[500_32]}`,
           '&:hover': {
             backgroundColor: theme.palette.action.hover
           }
