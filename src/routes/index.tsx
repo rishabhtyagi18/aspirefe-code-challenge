@@ -5,8 +5,6 @@ import { JSX } from 'react/jsx-runtime';
 import LogoOnlyLayout from '../layouts/LogoOnlyLayout';
 import DashboardLayout from '../layouts/dashboard';
 
-
-
 const Loadable = (Component: FC) => (props: JSX.IntrinsicAttributes) => {
    
     return (
@@ -25,7 +23,7 @@ const Loadable = (Component: FC) => (props: JSX.IntrinsicAttributes) => {
       {
         path: '/',
         element: <DashboardLayout />,
-        children: [{path: '', element: <HomePage />}]
+        children: [{path: '', element: <Navigate to="/cards" replace />}]
       },
 
       {
@@ -47,7 +45,6 @@ const Loadable = (Component: FC) => (props: JSX.IntrinsicAttributes) => {
  
   }
 
-  const HomePage = Loadable(lazy(() => import('../pages/home')));
   const CardsPage = Loadable(lazy(() => import('../pages/cards')));
 
   const NotFound = Loadable(lazy(() => import('../pages/Page404')));
