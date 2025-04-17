@@ -25,13 +25,13 @@ const Loadable = (Component: FC) => (props: JSX.IntrinsicAttributes) => {
       {
         path: '/',
         element: <DashboardLayout />,
-        children: [{path: '', element: <HomePage />}]
+        children: [{path: '', element: <CardsPage />}]
       },
 
       {
-        path: '/cards',
+        path: '/home',
         element: <DashboardLayout />,
-        children: [{path: '', element: <CardsPage />}]
+        children: [{path: '', element: <HomePage />}]
       },
 
         {
