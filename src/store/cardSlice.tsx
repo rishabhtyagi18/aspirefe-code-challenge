@@ -61,7 +61,9 @@ export const cardSlice = createSlice({
           card.isFreeze = !card.isFreeze;
       }
       if (state.selectedCard.id === action.payload) {
-          state.selectedCard.isFreeze = card.isFreeze;
+          if (card) {
+            state.selectedCard.isFreeze = card.isFreeze;
+          }
       }
   },
     selectCard: (state, action:PayloadAction<CardModel>) => {

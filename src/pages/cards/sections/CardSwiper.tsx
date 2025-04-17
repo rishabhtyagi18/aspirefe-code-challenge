@@ -98,22 +98,22 @@ function CardCarausel() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    customPaging: (pagi, i) => {
-      const isActive  = pagi === currentSlideIndex;
+    customPaging: (index: number) => {
+      const isActive = index === currentSlideIndex;
       return (
         <a>
-          <Box sx={{width: isActive? '16px': '8px', height: '8px', borderRadius: '8px', backgroundColor: '#01D167', opacity: isActive? 1 : 0.2, marginTop: '16px' }} />
+          <Box sx={{width: isActive ? '16px' : '8px', height: '8px', borderRadius: '8px', backgroundColor: '#01D167', opacity: isActive ? 1 : 0.2, marginTop: '16px' }} />
         </a>
       );
     },
-    beforeChange: (prev, next) => { 
+    beforeChange: (prev: number, next: number) => { 
       setSlideIndex(next);
     },
   };
   return(
     <Box sx={{width: ['100vw', '100vw', '414px']}}>
       <Slider {...settings} >
-        {_.map(cardList, (card, index) => <CardItem card={card} />)}
+        {_.map(cardList, (card) => <CardItem card={card} />)}
       </Slider>
     </Box>
   )
