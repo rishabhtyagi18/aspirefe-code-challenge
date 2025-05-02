@@ -34,7 +34,7 @@ function CardCtaBtn({containerProps}: {containerProps?: SxProps}) {
     const ctaBtns = [
         {
             key: 'freeze',
-            label: selectedCard.isFreeze ? 'Unfreeze \ncard' : 'Freeze \ncard',
+            label: selectedCard?.isFreeze ? 'Unfreeze \ncard' : 'Freeze \ncard',
             icon: '/icons/freeze-card.svg'
         },
         {

@@ -43,7 +43,17 @@ const transactionList = [
 
 ]
 
-function TransactionItem({ item, isLast }: { item: any, isLast: boolean }) {
+interface TransactionItemProps {
+  bgColor: string;
+  icon: string;
+  title: string;
+  date: string;
+  description: string;
+  isCredit: boolean;
+  amount: string;
+}
+
+function TransactionItem({ item, isLast }: { item: TransactionItemProps, isLast: boolean }) {
 
   return (
     <Stack direction="row" justifyContent="center" sx={{py: 2, borderBottom: !isLast ? '1px solid #F5F5F5': 'none'}}>
